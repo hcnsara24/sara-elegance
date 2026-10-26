@@ -1,16 +1,46 @@
-# React + Vite
+# Sara Elegance: Women's Fashion Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Student name:** HOCINE Sara
+**Application name:** Sara Elegance
+**Module:** WAMD, ENSTA, TD-TP 2
 
-Currently, two official plugins are available:
+## Description
+A React web application for an online women's fashion store (clothes, accessories and shoes). Users can browse products, view details, choose a quantity, save favorites and manage a shopping cart. Cart and favorites are managed globally with Redux.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
+React.js, JSX, JavaScript (ES6+), Redux Toolkit, React-Redux, Vite, CSS3
 
-## React Compiler
+## Main components
+- `Layout.jsx`: Logo, Header, Footer
+- `Sections.jsx`: Hero, Features, Contact
+- `Shop.jsx`: Filters, ProductList, ProductCard
+- `Overlays.jsx`: Cart, CartItem, FavoritesPanel, SignInModal, ProductModal
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Redux state
+```js
+{
+  cart:      { items: [ { id, name, price, image, quantity } ] },
+  favorites: { ids: [1, 4, 7] }
+}
+```
+Actions: `addToCart`, `removeFromCart`, `increaseQuantity`, `decreaseQuantity`, `clearCart`, `toggleFavorite`
 
-## Expanding the Oxlint configuration
+## Features
+- Product catalog and product detail window (description, quantity, total price)
+- Add and remove products from the cart, quantity management, cart total
+- Search, category filter, sorting
+- Favorites panel
+- Discount display
+- Navigation, sign-in window and contact form (demo only)
+- Local storage persistence
+- Responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run
+```bash
+npm install
+npm run dev
+```
+
+## Links
+- GitHub: https://github.com/hcnsara24/sara-elegance
+- Live demo: https://hcnsara24.github.io/sara-elegance/
